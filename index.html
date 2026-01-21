@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Industrial Engineering - Budi Santoso</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#3b82f6',
+                        accent: '#f59e0b',
+                        dark: '#0f172a',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #e2e8f0;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            border-radius: 4px;
+            background-color: #3b82f6;
+        }
+        
+        .project-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark font-sans">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                    <i class="fas fa-industry text-white text-xl"></i>
+                </div>
+                <span class="text-xl font-bold text-primary">BudiSantoso</span>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="text-gray-600 hover:text-primary font-medium">Beranda</a></li>
+                    <li><a href="#about" class="text-gray-600 hover:text-primary font-medium">Tentang</a></li>
+                    <li><a href="#skills" class="text-gray-600 hover:text-primary font-medium">Keahlian</a></li>
+                    <li><a href="#projects" class="text-gray-600 hover:text-primary font-medium">Proyek</a></li>
+                    <li><a href="#contact" class="text-gray-600 hover:text-primary font-medium">Kontak</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white pt-24 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Industrial Engineer yang Berfokus pada Efisiensi & Inovasi</h1>
+                    <p class="text-xl mb-8 text-blue-100">Mengoptimalkan proses produksi, mengurangi limbah, dan meningkatkan produktivitas melalui pendekatan berbasis data</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">Hubungi Saya</a>
+                        <a href="#projects" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition">Lihat Proyek</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                            <div class="w-56 h-56 md:w-72 md:h-72 rounded-full bg-white flex items-center justify-center overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Budi Santoso" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg font-bold">
+                            <i class="fas fa-chart-line mr-2"></i>Optimisasi Proses
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Tentang Saya</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/3">
+                    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Industrial Engineering" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-2xl font-semibold mb-4">Industrial Engineer dengan Pengalaman 5 Tahun</h3>
+                    <p class="text-gray-700 mb-4">
+                        Saya adalah seorang Industrial Engineer yang bersemangat dalam mengoptimalkan sistem produksi dan rantai pasok. 
+                        Dengan latar belakang pendidikan dari Institut Teknologi Bandung dan pengalaman di industri manufaktur, 
+                        saya telah membantu berbagai perusahaan meningkatkan efisiensi operasional hingga 30%.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Filosofi saya sederhana: setiap proses memiliki potensi untuk ditingkatkan. Saya percaya pada pendekatan berbasis data, 
+                        pemikiran sistem, dan keterlibatan karyawan dalam menciptakan solusi berkelanjutan yang meningkatkan kualitas dan mengurangi limbah.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-graduation-cap text-secondary mr-3"></i>
+                            <span>S1 Teknik Industri - ITB</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-briefcase text-secondary mr-3"></i>
+                            <span>5+ Tahun Pengalaman</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-project-diagram text-secondary mr-3"></i>
+                            <span>20+ Proyek Sukses</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-secondary mr-3"></i>
+                            <span>4 Perusahaan Multinasional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Keahlian Utama</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Technical Skills -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-primary"><i class="fas fa-laptop-code mr-2"></i>Kemampuan Teknis</h3>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span>Analisis Sistem & Proses</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span>Perancangan Tata Letak Pabrik</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span>Peramalan Permintaan</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span>Perencanaan Produksi</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span>Manajemen Kualitas</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Software & Methodologies -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-primary"><i class="fas fa-tools mr-2"></i>Perangkat Lunak & Metodologi</h3>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-gray-100 p-3 rounded-lg text-center">
+                            <i class="fab fa-python text-2xl text-secondary mb-2"></i>
+                            <p>Python</p>
+                        </div>
+                        <div class="bg-gray-100 p-3 rounded-lg text-center">
+                            <i class="fas fa-database text-2xl text-secondary mb-2"></i>
+                            <p>SQL</p>
+                        </div>
+                        <div class="bg-gray-100 p-3 rounded-lg text-center">
+                            <i class="fas fa-chart-bar text-2xl text-secondary mb-2"></i>
+                            <p>Tableau</p>
+                        </div>
+                        <div class="bg-gray-100 p-3 rounded-lg text-center">
+                            <i class="fas fa-project-diagram text-2xl text-secondary mb-2"></i>
+                            <p>AnyLogic</p>
+                        </div>
+                        <div class="bg-gray-100 p-3 rounded-lg text-center">
+                            <i class="fab fa-microsoft text-2xl text-secondary mb-2"></i>
+                            <p>Excel (Advanced)</p>
+                        </div>
+                        <div class="bg-gray-100 p-3 rounded-lg text-center">
+                            <i class="fas fa-industry text-2xl text-secondary mb-2"></i>
+                            <p>AutoCAD</p>
+                        </div>
+                    </div>
+                    
+                    <h4 class="font-semibold mb-3">Metodologi:</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Lean Manufacturing</span>
+                        <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Six Sigma</span>
+                        <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Kaizen</span>
+                        <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">5S</span>
+                        <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">TQM</span>
+                        <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">TOC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Proyek Unggulan</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Proyek-proyek yang telah saya tangani untuk meningkatkan efisiensi, mengurangi biaya, dan meningkatkan produktivitas</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="p-6">
+                        <span class="text-sm text-accent font-semibold">Lean Manufacturing</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Optimasi Lini Produksi Otomotif</h3>
+                        <p class="text-gray-600 mb-4">Mengurangi waktu siklus produksi sebesar 25% dan mengurangi limbah material sebesar 18% melalui penerapan prinsip Lean Manufacturing.</p>
+                        <div class="flex justify-between text-sm text-gray-500">
+                            <span>PT. Mobilindo</span>
+                            <span>2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1605733513597-1434484f2d22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="p-6">
+                        <span class="text-sm text-accent font-semibold">Perencanaan Fasilitas</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Perancangan Tata Letak Pabrik Elektronik</h3>
+                        <p class="text-gray-600 mb-4">Mendesain ulang tata letak pabrik untuk meningkatkan aliran material dan mengurangi jarak pergerakan operator hingga 40%.</p>
+                        <div class="flex justify-between text-sm text-gray-500">
+                            <span>PT. Elektronika Jaya</span>
+                            <span>2022</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="p-6">
+                        <span class="text-sm text-accent font-semibold">Manajemen Rantai Pasok</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Optimasi Rantai Pasok Komponen</h3>
+                        <p class="text-gray-600 mb-4">Mengembangkan sistem perencanaan permintaan dan pengadaan yang mengurangi persediaan berlebih sebesar 30% tanpa mengganggu produksi.</p>
+                        <div class="flex justify-between text-sm text-gray-500">
+                            <span>PT. Sumber Komponen</span>
+                            <span>2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-secondary font-semibold hover:text-primary">
+                    Lihat Semua Proyek
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Hubungi Saya</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Mari berdiskusi tentang bagaimana saya dapat membantu mengoptimalkan operasi bisnis Anda</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-primary text-white p-8">
+                        <h3 class="text-xl font-bold mb-6">Informasi Kontak</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>
+                                <span>Jakarta, Indonesia</span>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-3 text-accent"></i>
+                                <span>budi.santoso@email.com</span>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-phone mt-1 mr-3 text-accent"></i>
+                                <span>+62 812 3456 7890</span>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-globe mt-1 mr-3 text-accent"></i>
+                                <span>www.budisantoso.id</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-3">Ikuti Saya</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-2/3 p-8">
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 mb-2">Nama Lengkap</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 mb-2">Subjek</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-2">Pesan</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition">
+                                Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+                            <i class="fas fa-industry text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold">BudiSantoso</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">Industrial Engineer | Optimisasi Proses | Efisiensi Operasional</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">© 2026 Budi Santoso. All rights reserved.</p>
+                    <p class="text-gray-500 text-sm mt-2">Designed with <i class="fas fa-heart text-red-500"></i> for Industrial Engineering</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
